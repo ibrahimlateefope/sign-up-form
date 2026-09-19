@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-image">
+        <div class="logo-bar">
+          <img src="imgs/odin-lined.png" alt="odin-logo" />
+          <h1>Odin</h1>
+        </div>
+      </div>
+      <div class="page-container">
+        <div class="header-text">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realise you deepest dreams.
+          </p>
+          <p>Sign up now to get started.</p>
+          <p class="marginal-line">You know you want to.</p>
+        </div>
+        <div class="form-container">
+          <h2>Let's do this!</h2>
+          <form action="/form" method="post" id="sign-up" novalidate>
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                minlength="2"
+                maxlength="30"
+                required
+                autocomplete="given-name"
+                aria-describedby="firstName-error"
+              />
+              <span
+                class="field-error"
+                id="firstName-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                minlength="2"
+                maxlength="30"
+                required
+                autocomplete="family-name"
+                aria-describedby="lastName-error"
+              />
+              <span
+                class="field-error"
+                id="lastName-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                autocomplete="email"
+                aria-describedby="email-error"
+              />
+              <span
+                class="field-error"
+                id="email-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="field">
+              <label for="phoneNumber">Phone Number</label>
+              <input
+                type="tel"
+                name="phoneNumber"
+                id="phoneNumber"
+                pattern="[0-9]{11}"
+                required
+                autocomplete="tel"
+                aria-describedby="phoneNumber-error"
+              />
+              <span
+                class="field-error"
+                id="phoneNumber-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}"
+                required
+                autocomplete="new-password"
+                aria-describedby="password-error"
+              />
+              <span
+                class="field-error"
+                id="password-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="field">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                required
+                autocomplete="new-password"
+                aria-describedby="confirmPassword-error"
+              />
+              <span
+                class="field-error"
+                id="confirmPassword-error"
+                aria-live="polite"
+              ></span>
+            </div>
+          </form>
+        </div>
+        <div class="form-actions">
+          <button type="submit" form="sign-up">Create Account</button>
+
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
